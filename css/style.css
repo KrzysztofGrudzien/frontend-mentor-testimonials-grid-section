@@ -71,8 +71,9 @@ a:active {
 /* ------- TESTIMONIALS SECTION ------- */
 
 .cards {
-    max-width: 327px;
+    width: 327px;
     margin: 4.4375rem 0;
+    display: grid;
 }
 
 .cards__title {
@@ -139,4 +140,57 @@ a:active {
     background-color: var(--color-white);
     box-shadow: 40px 60px 50px hsl(217, 19%, 35%, 24.75%);
     color: var(--color-gray-dark);
+}
+
+/* ------- DESKTOP ------- */
+
+@media screen and (min-width: 1440px) {
+    .cards {
+        grid-template-columns: 1fr 1fr 255px 255px;
+        grid-template-rows: 290px 266px;
+        gap: 2rem;
+        height: 572px;
+        margin: 0 auto;
+        width: 1110px;
+    }
+
+    .card {
+        margin: 0;
+    }
+
+    .card--violet {
+        background-position: top right 5rem;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .card--black {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+
+    .card--gray {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+
+    .card--white-one {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .card--white-two {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
 }
